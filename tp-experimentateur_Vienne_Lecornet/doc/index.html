@@ -1,0 +1,223 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Experimentateur &mdash; Module tp-experimentateur 0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="Module tp-experimentateur 0 documentation" href="#" />
+    <link rel="next" title="experience module" href="experience.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="experience.html" title="experience module"
+             accesskey="N">next</a> |</li>
+        <li class="nav-item nav-item-0"><a href="#">Module tp-experimentateur 0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="experimentateur">
+<h1>Experimentateur<a class="headerlink" href="#experimentateur" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="experience.html"><code class="docutils literal"><span class="pre">experience</span></code> module</a></li>
+</ul>
+</div>
+<div class="section" id="etat-du-tp">
+<h2>Etat du TP<a class="headerlink" href="#etat-du-tp" title="Permalink to this headline">¶</a></h2>
+<p>En cours</p>
+</div>
+<div class="section" id="reponses-aux-questions">
+<h2>Réponses aux questions<a class="headerlink" href="#reponses-aux-questions" title="Permalink to this headline">¶</a></h2>
+<p>Indiquez ici les réponses aux questions posées dans le TP. Vous
+reprendrez le numéro de la section et le numéro de la question. Par
+exemple pour répondre à la question 3 de la section 2.4 vous
+indiquerez.</p>
+<div class="section" id="question-1-2-2">
+<h3>Question 1.2.2<a class="headerlink" href="#question-1-2-2" title="Permalink to this headline">¶</a></h3>
+<p>OP= nombres de comparaisons</p>
+</div>
+<div class="section" id="question-1-2-3">
+<h3>Question 1.2.3<a class="headerlink" href="#question-1-2-3" title="Permalink to this headline">¶</a></h3>
+<p>pire cas: si il n&#8217;y a pas de marqueurs positif</p>
+<p>meilleur cas: le premier marqueur est positif</p>
+</div>
+<div class="section" id="question-1-2-4">
+<h3>Question 1.2.4<a class="headerlink" href="#question-1-2-4" title="Permalink to this headline">¶</a></h3>
+<p>pire cas : c1(m,p)=taille de p * taille de m</p>
+<p>meilleur cas: c1(m,p)=1</p>
+</div>
+<div class="section" id="question-1-3-2">
+<h3>Question 1.3.2<a class="headerlink" href="#question-1-3-2" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>pire cas: si le tableau est trie a l&#8217;envers (ordre décroissant) et qu&#8217;il n&#8217;y a pas de marqueurs positif</dt>
+<dd>n=taille du tableau p
+c2(m,p)= nlog(n) +c1</dd>
+</dl>
+</div>
+<div class="section" id="question-1-4-2">
+<h3>Question 1.4.2<a class="headerlink" href="#question-1-4-2" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>pire cas <span class="classifier-delimiter">:</span> <span class="classifier">le marqueur positif est au dernier emplacement du tableau marqueur et positive</span></dt>
+<dd><p class="first">n=taille du tableau m</p>
+<p class="last">c3(m,p)= nlog(n) +c2</p>
+</dd>
+</dl>
+</div>
+<div class="section" id="question-1-5-2">
+<h3>Question 1.5.2<a class="headerlink" href="#question-1-5-2" title="Permalink to this headline">¶</a></h3>
+<dl class="docutils">
+<dt>Versions:</dt>
+<dd><dl class="first last docutils">
+<dt>Strategie 1:</dt>
+<dd><p class="first">Markers: [&#8216;m9&#8217;, &#8216;m2&#8217;, &#8216;m3&#8217;, &#8216;m0&#8217;, &#8216;m7&#8217;, &#8216;m4&#8217;, &#8216;m6&#8217;, &#8216;m5&#8217;, &#8216;m8&#8217;, &#8216;m1&#8217;]</p>
+<p>Positive markers: [&#8216;m9&#8217;, &#8216;m2&#8217;]</p>
+<p>Negative markers: []</p>
+<p>Nb. comparaisons: 1     #strategie 1</p>
+<p>Negative markers: []</p>
+<p>Nb. comparaisons: 2     #strategie 2</p>
+<p>Negative markers: [&#8216;m0&#8217;, &#8216;m1&#8217;]</p>
+<p class="last">Nb. comparaisons: 5     #strategie 3</p>
+</dd>
+<dt>Strategie 2:</dt>
+<dd><p class="first">Markers: [&#8216;m4&#8217;, &#8216;m5&#8217;, &#8216;m1&#8217;, &#8216;m9&#8217;, &#8216;m3&#8217;, &#8216;m7&#8217;, &#8216;m0&#8217;, &#8216;m6&#8217;, &#8216;m8&#8217;, &#8216;m2&#8217;]</p>
+<p>Positive markers: [&#8216;m8&#8217;, &#8216;m4&#8217;]</p>
+<p>Negative markers: []</p>
+<p>Nb. comparaisons: 2     #strategie 1</p>
+<p>Negative markers: []</p>
+<p>Nb. comparaisons: 1     #strategie 2</p>
+<p>Negative markers: [&#8216;m0&#8217;, &#8216;m1&#8217;, &#8216;m2&#8217;, &#8216;m3&#8217;]</p>
+<p class="last">Nb. comparaisons: 9     #strategie 3</p>
+</dd>
+<dt>Strategie 3:</dt>
+<dd><p class="first">Markers: [&#8216;m1&#8217;, &#8216;m2&#8217;, &#8216;m5&#8217;, &#8216;m4&#8217;, &#8216;m3&#8217;, &#8216;m9&#8217;, &#8216;m6&#8217;, &#8216;m7&#8217;, &#8216;m8&#8217;, &#8216;m0&#8217;]</p>
+<p>Positive markers: [&#8216;m0&#8217;, &#8216;m8&#8217;]</p>
+<p>Negative markers: [&#8216;m1&#8217;, &#8216;m2&#8217;, &#8216;m5&#8217;, &#8216;m4&#8217;, &#8216;m3&#8217;, &#8216;m9&#8217;, &#8216;m6&#8217;, &#8216;m7&#8217;]</p>
+<p>Nb. comparaisons: 18    #strategie 1</p>
+<p>Negative markers: [&#8216;m1&#8217;, &#8216;m2&#8217;, &#8216;m5&#8217;, &#8216;m4&#8217;, &#8216;m3&#8217;, &#8216;m9&#8217;, &#8216;m6&#8217;, &#8216;m7&#8217;]</p>
+<p>Nb. comparaisons: 18    #strategie 2</p>
+<p>Negative markers: []</p>
+<p class="last">Nb. comparaisons: 1     #strategie 3</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p>On peut constater quand fonctions des situations, une strategie peut être plus performante que les autres.
+Cela vient du fait que selon la disposition des markers dans les tableaux, les algorithmes de tri effectuent plus ou moins de comparaisons.</p>
+</div>
+<div class="section" id="question-1-5-6">
+<h3>Question 1.5.6<a class="headerlink" href="#question-1-5-6" title="Permalink to this headline">¶</a></h3>
+<p>&lt;img src=&#8217;../src/fichier1.png&#8217;/&gt;</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="#">
+              <img class="logo" src="_static/logo_FIL.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="#">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Experimentateur</a><ul>
+<li><a class="reference internal" href="#etat-du-tp">Etat du TP</a></li>
+<li><a class="reference internal" href="#reponses-aux-questions">Réponses aux questions</a><ul>
+<li><a class="reference internal" href="#question-1-2-2">Question 1.2.2</a></li>
+<li><a class="reference internal" href="#question-1-2-3">Question 1.2.3</a></li>
+<li><a class="reference internal" href="#question-1-2-4">Question 1.2.4</a></li>
+<li><a class="reference internal" href="#question-1-3-2">Question 1.3.2</a></li>
+<li><a class="reference internal" href="#question-1-4-2">Question 1.4.2</a></li>
+<li><a class="reference internal" href="#question-1-5-2">Question 1.5.2</a></li>
+<li><a class="reference internal" href="#question-1-5-6">Question 1.5.6</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  <h4>Next topic</h4>
+  <p class="topless"><a href="experience.html"
+                        title="next chapter"><code class="docutils literal"><span class="pre">experience</span></code> module</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/index.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="experience.html" title="experience module"
+             >next</a> |</li>
+        <li class="nav-item nav-item-0"><a href="#">Module tp-experimentateur 0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2016, Vienne Jérémy, Lecornet Didrick, Univ. Lille1.
+      Last updated on 01/02/2017.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.6.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,7 @@
+----------------------
+Repetition three times
+----------------------
+
+
+.. automodule:: repeat_three_times
+   :members:

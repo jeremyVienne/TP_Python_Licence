@@ -1,0 +1,7 @@
+----------------------
+Hamming coding
+----------------------
+
+
+.. automodule:: hamming
+   :members:

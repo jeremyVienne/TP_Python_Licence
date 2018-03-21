@@ -1,0 +1,7 @@
+
+.. toctree::
+   :maxdepth: 1
+
+   binary_channel
+   repeat_three_times
+   hamming           

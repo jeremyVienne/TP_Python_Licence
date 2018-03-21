@@ -1,0 +1,289 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en_EN">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Le module coding &mdash; Codage - Codages et décodages 0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <link rel="top" title="Codage - Codages et décodages 0 documentation" href="index.html" />
+    <link rel="next" title="Les fonctions à créer" href="tp-codings.html" />
+    <link rel="prev" title="&lt;no title&gt;" href="index.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="tp-codings.html" title="Les fonctions à créer"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="&lt;no title&gt;"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Codage - Codages et décodages 0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="le-module-coding">
+<h1>Le module <code class="docutils literal"><span class="pre">coding</span></code><a class="headerlink" href="#le-module-coding" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference internal" href="index.html"><span class="doc">back</span></a></p>
+<span class="target" id="module-coding"></span><p>Coding module.</p>
+<p>&#64;author FIL - IEEA - Univ. Lille1 (oct 2010, août 2015)</p>
+<dl class="exception">
+<dt id="coding.Not_coding">
+<em class="property">exception </em><code class="descclassname">coding.</code><code class="descname">Not_coding</code><a class="headerlink" href="#coding.Not_coding" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exception raised by <cite>coding.create</cite>.</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="coding.Not_codable_symbol">
+<em class="property">exception </em><code class="descclassname">coding.</code><code class="descname">Not_codable_symbol</code><a class="headerlink" href="#coding.Not_codable_symbol" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exception raised by <cite>coding.Coding.code</cite>.</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="coding.Undecodable_word">
+<em class="property">exception </em><code class="descclassname">coding.</code><code class="descname">Undecodable_word</code><a class="headerlink" href="#coding.Undecodable_word" title="Permalink to this definition">¶</a></dt>
+<dd><p>Exception raised by <cite>coding.Coding.decode</cite>.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="coding.create">
+<code class="descclassname">coding.</code><code class="descname">create</code><span class="sig-paren">(</span><em>alphabet</em>, <em>code</em><span class="sig-paren">)</span><a class="headerlink" href="#coding.create" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a coding for the given alphabet and code.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>alphabet</strong> (<em>list</em>) &#8211; a list of symbols</li>
+<li><strong>code</strong> &#8211; a list of codewords</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">a Coding object, which represents a coding</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><p class="first"><a class="reference internal" href="#coding.Coding" title="coding.Coding">Coding</a></p>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">CU:</th><td class="field-body"><p class="first">len(alphabet) == len(code) and alphabet and code don&#8217;t contain twice    the same element. Raises exception <cite>coding.Not_coding</cite>.</p>
+</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Examples:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">create</span><span class="p">([</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;00&#39;</span><span class="p">,</span> <span class="s1">&#39;1&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">code</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">)</span>
+<span class="go">&#39;00&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">create</span><span class="p">([],</span> <span class="p">[</span><span class="s1">&#39;00&#39;</span><span class="p">])</span>
+<span class="gt">Traceback (most recent call last):</span>
+<span class="c">...</span>
+<span class="gr">Not_coding</span>: <span class="n">The number of symbols in the alphabet differs from the number of codewords </span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">create</span><span class="p">([</span><span class="s1">&#39;a&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;&#39;</span><span class="p">])</span>
+<span class="gt">Traceback (most recent call last):</span>
+<span class="c">...</span>
+<span class="gr">Not_coding</span>: <span class="n">Empty word not allowed</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">create</span><span class="p">([</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;a&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;0&#39;</span><span class="p">,</span> <span class="s1">&#39;1&#39;</span><span class="p">])</span>
+<span class="gt">Traceback (most recent call last):</span>
+<span class="c">...</span>
+<span class="gr">Not_coding</span>: <span class="n">Symbol a appears twice in the alphabet</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">create</span><span class="p">([</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;0&#39;</span><span class="p">,</span> <span class="s1">&#39;0&#39;</span><span class="p">])</span>
+<span class="gt">Traceback (most recent call last):</span>
+<span class="c">...</span>
+<span class="gr">Not_coding</span>: <span class="n">Codeword 0 appears twice in the code</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="class">
+<dt id="coding.Coding">
+<em class="property">class </em><code class="descclassname">coding.</code><code class="descname">Coding</code><span class="sig-paren">(</span><em>table_codage={}</em>, <em>table_decodage={}</em><span class="sig-paren">)</span><a class="headerlink" href="#coding.Coding" title="Permalink to this definition">¶</a></dt>
+<dd><p>The <cite>Coding</cite> type allows to code symbols with specified codewords (or to
+decode them).</p>
+<dl class="method">
+<dt id="coding.Coding.alphabet">
+<code class="descname">alphabet</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#coding.Coding.alphabet" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the source alphabet</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body">the alphabet associated with the coding</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Examples:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">coding1</span> <span class="o">=</span> <span class="n">create</span><span class="p">([</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;00&#39;</span><span class="p">,</span> <span class="s1">&#39;01&#39;</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">coding1</span><span class="o">.</span><span class="n">alphabet</span><span class="p">()</span>
+<span class="go">[&#39;a&#39;, &#39;b&#39;]</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="coding.Coding.code">
+<code class="descname">code</code><span class="sig-paren">(</span><em>symbol</em><span class="sig-paren">)</span><a class="headerlink" href="#coding.Coding.code" title="Permalink to this definition">¶</a></dt>
+<dd><p>Codes the provided symbol</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>symbol</strong> (<em>str</em>) &#8211; the symbol to be coded</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">The corresponding codeword</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+<tr class="field-even field"><th class="field-name">CU:</th><td class="field-body">symbol belongs to the alphabet, otherwise Not_codable_symbol</td>
+</tr>
+</tbody>
+</table>
+<p>exception is raised</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Examples:</th><td class="field-body"></td>
+</tr>
+</tbody>
+</table>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">coding1</span> <span class="o">=</span> <span class="n">create</span><span class="p">([</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;00&#39;</span><span class="p">,</span> <span class="s1">&#39;01&#39;</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">coding1</span><span class="o">.</span><span class="n">code</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">)</span>
+<span class="go">&#39;00&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">coding1</span><span class="o">.</span><span class="n">code</span><span class="p">(</span><span class="s1">&#39;c&#39;</span><span class="p">)</span>
+<span class="gt">Traceback (most recent call last):</span>
+<span class="c">...</span>
+<span class="gr">Not_codable_symbol</span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="coding.Coding.decode">
+<code class="descname">decode</code><span class="sig-paren">(</span><em>word</em><span class="sig-paren">)</span><a class="headerlink" href="#coding.Coding.decode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Decodes a codeword.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>word</strong> (<em>str</em>) &#8211; The word is a codeword from the code.</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">the corresponding symbol from the alphabet</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+<tr class="field-even field"><th class="field-name">CU:</th><td class="field-body">The word must belongs to the code, otherwise Undecodable_word</td>
+</tr>
+</tbody>
+</table>
+<p>exception is raised.
+:Examples:</p>
+<div class="highlight-default"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">coding1</span> <span class="o">=</span> <span class="n">create</span><span class="p">([</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;b&#39;</span><span class="p">],</span> <span class="p">[</span><span class="s1">&#39;00&#39;</span><span class="p">,</span> <span class="s1">&#39;01&#39;</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">coding1</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;01&#39;</span><span class="p">)</span>
+<span class="go">&#39;b&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">coding1</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;11&#39;</span><span class="p">)</span>
+<span class="gt">Traceback (most recent call last):</span>
+<span class="c">...</span>
+<span class="gr">Undecodable_word</span>
+</pre></div>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/logo_FIL.png" alt="Logo"/>
+            </a></p>
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="index.html"
+                        title="previous chapter">&lt;no title&gt;</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="tp-codings.html"
+                        title="next chapter">Les fonctions à créer</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/coding.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="tp-codings.html" title="Les fonctions à créer"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="index.html" title="&lt;no title&gt;"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Codage - Codages et décodages 0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2015, FIL - IEEA - Univ-Lille 1.
+      Last updated on 30/08/2016.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.5.
+    </div>
+  </body>
+</html>

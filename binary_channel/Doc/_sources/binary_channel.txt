@@ -1,0 +1,7 @@
+---------------------
+Binary channel
+---------------------
+
+
+.. automodule:: binary_channel
+   :members:
